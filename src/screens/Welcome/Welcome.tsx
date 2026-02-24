@@ -84,20 +84,15 @@ const Welcome: React.FC<GuestStackScreenProps<'Welcome'>> = ({
 								size={'sm'}
 								className="border-slate-400 ml-2 px-4"
 								onPress={() => navigation.navigate('Login')}
-								disabled={isLoggingIn}
 							>
 								<View className="flex-row justify-center items-center">
-									{isLoggingIn ? (
-										<Flow color="#fff" size={15} />
-									) : (
-										<ThemeText
-											size={'fs_13'}
-											className="leading-5 text-black dark:text-white"
-										>
-											{' '}
-											{t('login.sign_in')}
-										</ThemeText>
-									)}
+									<ThemeText
+										size={'fs_13'}
+										className="leading-5 text-black dark:text-white"
+									>
+										{' '}
+										{t('login.sign_in')}
+									</ThemeText>
 								</View>
 							</Button>
 						</View>
